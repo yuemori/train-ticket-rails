@@ -18,7 +18,7 @@ class FareRule
     end
 
     def pluck(key)
-      map(&:"#{key}")
+      map(&key.to_sym)
     end
 
     def find_by(number_of_section:)
